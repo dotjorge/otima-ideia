@@ -1,0 +1,49 @@
+// Header
+.header-reduced
+    --header_height: 80px
+
+header
+    position: fixed
+    top: 0
+    z-index: 5
+    width: 100%
+    //padding: 0 var(--content-padding)
+    height: var(--header_height)
+    color: white
+    background: var(--background)
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: .5s ease height
+    > div
+        width: calc(100% - var(--content-padding))
+        max-width: var(--content-size)
+        height: 52px
+        display: flex
+        align-items: center
+        overflow: hidden
+    > div svg
+        fill: white
+        height: 100%
+        width: auto
+        flex: none
+
+    ul
+        display: flex
+        column-gap: 40px
+        font-size: 1.1875em
+    li
+        list-style: none
+    .register-btn
+        font-size: 1.1875em
+        margin-left: auto
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        color: white
+        width: 151px
+        height: 52px
+        background: gray
+        border-radius: 31px
+    @media only screen and (max-width: 800px)
+        transition: none

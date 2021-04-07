@@ -15,20 +15,23 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
-		<header>
-			<div class="logo">Logo</div>
-			<div class="menu">
-				<ul>
-					<li>Projects</li>
-					<li>Partners</li>
-					<li>FAQ</li>
-					<li>Masters</li>
-					<li>Classes</li>
-					<li>Course Experience</li>
-					<li>About us</li>
-				</ul>
+		<header id="header">
+			<div>
+				<?php echo file_get_contents(get_template_directory_uri() . "/logo.svg")?>
+				
+				<div class="menu">
+					<ul>
+						<li>Projects</li>
+						<li>Partners</li>
+						<li>FAQ</li>
+						<li>Masters</li>
+						<li>Classes</li>
+						<li>Course Experience</li>
+						<li>About us</li>
+					</ul>
+				</div>
+				
+				<a href="#" class="register-btn">Botao</a>
 			</div>
-			<a href="#" class="register-btn">Botao</a>
 		</header><!-- #masthead -->
 
-	<div id="content" class="site-content">

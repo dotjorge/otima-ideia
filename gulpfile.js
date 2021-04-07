@@ -16,7 +16,7 @@ gulp.task('serve', function() {
 
 gulp.watch('./sass/**/*.sass', gulp.series('sass'));
 gulp.watch('*.php').on('change',browserSync.reload);
-gulp.watch('js/**/*.js', browserSync.reload); 
+gulp.watch('js/**/*.js').on('change',browserSync.reload);
 });
 
 
@@ -24,7 +24,7 @@ gulp.task('sass', function () {
   console.log('Sass file changed');
   return gulp.src('./sass/**/*.sass')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({
       stream: true
     }))
