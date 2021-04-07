@@ -10,7 +10,7 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('serve', function() {
   browserSync.init({
-    proxy: "http://otimaideia.local",
+    proxy: "http://otima.ideia",
     https: false
 });
 

@@ -35,12 +35,11 @@ get_header();
 					<div class="about-us">
 						<h3 class="title-effect" data-text="About us">About us</h3>
 						<div class="socials">
-							<?php echo file_get_contents(get_template_directory_uri() . "/icons/social/instagram-brands.svg")?>
+							<?php echo file_get_contents(get_template_directory_uri() . "/icons/socials/instagram-brands.svg")?>
 						</div>
 					</div>
 				</div>
 				<p>
-				Git Push automatico no cpanel =P
 				Today, given the economic and labor market conditions, the best and least risky way to invest is to invest in personal assets and skills. UI / UX Product Design Course covers all aspects of product design from product thinking and design to user-centric research and product research and business vision and digital marketing to product designers and creators, designing the end-user experience and interface of the product and how to deliver it. Includes.
 				</p>
 			</section>
