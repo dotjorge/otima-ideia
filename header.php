@@ -31,7 +31,7 @@
 					</ul>
 				</div>
 				
-				<a href="#" class="register-btn">Botao</a>
+				<a href="#" class="register-btn">Register</a>
 			</div>
 		</header><!-- #masthead -->
 
