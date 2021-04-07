@@ -14,15 +14,17 @@ get_header();
 						<p>Learn how design thinking, user research, business vision and marketing, and finally designing and creating real digital products for real users.</p>
 						<a href="#" class="button">Start Register</a>
 					</div>
+					<div class="arrows">
+					<div class="left"><</div>
+					<div class="right">></div>
+					</div>
 					<div class="right">
-						<div style="width:100%;height:100%;background:brown;display:flex;align-items:center">
+						<div style="width:100%;height:100%;display:flex;align-items:center">
 						<img width="100%" height="auto" src="
 						<?php echo get_template_directory_uri() . "/kia-ux-course.png"?>">
 						</div>
 					</div>
 
-					<div class="arrow left"><</div>
-					<div class="arrow right">></div>
 				</div>
 
 			</section>
@@ -30,12 +32,14 @@ get_header();
 			<section class="sections about-us content-width" style="margin-top:100px;">
 				<div class="grid">
 					<div class="product-factory">
-					Product Factory
+						<?php echo file_get_contents(get_template_directory_uri() . "/logo.svg")?>
 					</div>
 					<div class="about-us">
 						<h3 class="title-effect" data-text="About us">About us</h3>
 						<div class="socials">
 							<?php echo file_get_contents(get_template_directory_uri() . "/icons/socials/instagram-brands.svg")?>
+							<?php echo file_get_contents(get_template_directory_uri() . "/icons/socials/twitter-brands.svg")?>
+							<?php echo file_get_contents(get_template_directory_uri() . "/icons/socials/facebook-square-brands.svg")?>
 						</div>
 					</div>
 				</div>

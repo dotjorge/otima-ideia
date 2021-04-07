@@ -55,16 +55,24 @@ section
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 20px
-        .arrow
+        .arrows
             position: absolute
             top: 50%
+            display: flex
+            justify-content: space-between
             font-size: 50px
-        .arrow.left
-            left: -20px
-            transform: translateX(-100%)
-        .arrow.right
-            right: -20px
-            transform: translateX(100%)
+            width: calc(100% + 120px)
+            left: -60px
+            @media only screen and (max-width: 800px)
+                position: relative
+                width: 100%
+                left: 0
+                top: 0
+            .left
+                cursor: pointer
+            .right
+                cursor: pointer
+
     .left
         display: flex
         flex-direction: column
@@ -93,12 +101,31 @@ section
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 20px
+        .product-factory
+            width: 100%
+            max-width: 597px
+            height: 351px
+            border-radius: 30px
+            background: black
+            display: flex
+            align-items: center
+            justify-content: center
+            svg
+                fill: white
+                max-width: 546px
+                height: 88px
+                flex: none
     .about-us
         display: flex
         align-items: center
         justify-content: center
         .socials
+            display: grid
+            grid-gap: 10px
             margin-left: 50px
+            svg
+                width: 1.75em
+                height: 1.75em
     .left
         display: flex
         flex-direction: column
