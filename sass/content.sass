@@ -15,6 +15,7 @@ main
 .content-width.padding
     width: calc(100% - var(--content-padding))
 
+// ---- All sections ----
 section
     position: relative
     background: white
@@ -22,10 +23,11 @@ section
     box-shadow: 50px 50px 99px #11111129
     h1
         font-size: 3.125em
-        font-weight: bold
+        font-weight: 900
         margin-bottom: 0
     h2
         font-size: 2.375em
+        font-weight: normal
         color: #8d8d8d
     h3
         font-size: 2em
@@ -36,16 +38,17 @@ section
         align-items: center
         justify-content: center
         &::before
-            content: attr(data-text)
+            content: attr(data-text-behind)
             position: absolute
-            transform: scale(2)
-            opacity: .1
-
+            transform: scale(3)
+            opacity: .07
     p
         font-size: 1.4375em
         line-height: 2.375em
+    .grid
+        place-items: center
 
-
+// ---- Product Design Course ----
 .sections.top
     height: calc(100vh - 159px + 30px)
     max-height: 850px
@@ -72,28 +75,46 @@ section
                 cursor: pointer
             .right
                 cursor: pointer
-
     .left
         display: flex
         flex-direction: column
         .button
             margin-top: auto
             padding: 20px 40px
+            text-align: center
             font-size: 24px
-            font-weight: bold
+            font-weight: 500
             color: white
             background: var(--primary-color)
             border-radius: 16px
+            position: relative
+            overflow: visible
+            z-index: 1
+            &:hover::before
+                box-shadow: -5px 5px 15px var(--primary-color)
+            &::before
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                width: 100%
+                height: 100%
+                border-radius: 16px
+                z-index: -1
+                box-shadow: 0px 0px 0px var(--primary-color)
+                opacity: .5
+                transition: .2s ease box-shadow
     @media only screen and (max-width: 800px)
         max-height: unset
         height: unset
         min-height: calc(100vh - 159px + 30px)
         min-height: calc(100vh - var(--header_height) + 30px)
         padding: 20px 30px
-        font-size: 65%
+        font-size: 80%
         .grid
             grid-template-columns: 1fr
 
+// ---- About us ----
 .sections.about-us
     padding: 7.5em
     .grid
@@ -110,6 +131,8 @@ section
             display: flex
             align-items: center
             justify-content: center
+            //Center child on display grid
+            place-self: center
             svg
                 fill: white
                 max-width: 546px
@@ -119,10 +142,12 @@ section
         display: flex
         align-items: center
         justify-content: center
+        h3
+            margin-right: auto
+            margin-left: auto
         .socials
             display: grid
             grid-gap: 10px
-            margin-left: 50px
             svg
                 width: 1.75em
                 height: 1.75em
@@ -131,13 +156,71 @@ section
         flex-direction: column
     p
         font-size: 1.1875em
-        line-height: 2.375em
+        line-height: 2.1em
     @media only screen and (max-width: 800px)
         max-height: unset
         height: unset
         min-height: calc(100vh - 159px + 30px)
         min-height: calc(100vh - var(--header_height) + 30px)
         padding: 20px 30px
-        font-size: 65%
+        font-size: 80%
         .grid
             grid-template-columns: 1fr
+            .product-factory
+                height: 100px
+
+
+// ---- Course experience ----
+.sections.course-experience
+    padding: 7.5em
+    .time-line
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        width: 80%
+        margin: 0 auto
+        border: 1px solid black
+        border-radius: 16px
+        background: white
+        overflow: hidden
+        > div
+            text-align: center
+            padding: 10px 40px
+            &:first-child
+                border-right: 1px solid black
+            &:last-child
+                border-left: 1px solid black
+        .selected
+            background: black
+            color: white
+    .grid
+        position: relative
+        display: grid
+        grid-template-columns: auto 1fr
+        column-gap: 40px
+        grid-row-gap: 20px
+    .left
+        display: flex
+        flex-direction: column
+    p
+        font-size: 1.1875em
+        line-height: 2.1em
+    @media only screen and (max-width: 800px)
+        max-height: unset
+        height: unset
+        min-height: calc(100vh - 159px + 30px)
+        min-height: calc(100vh - var(--header_height) + 30px)
+        padding: 20px 30px
+        font-size: 80%
+        .time-line
+            width: 100%
+            grid-template-rows: 1fr
+            grid-template-columns: unset
+            > div
+                &:first-child
+                    border-right: none
+                &:last-child
+                    border-left: none
+        .grid
+            grid-template-columns: 1fr
+            svg
+                height: 120px
